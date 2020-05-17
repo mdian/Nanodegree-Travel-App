@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- main meta rules-->
+    <meta charset="utf-8">
+    <!-- for little responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- this for old browsers like edge  -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Travel App</title>
+</head>
+
+<body>
+    <!-- Start Header -->
+    <section class="wrapper">
+        <header class="main-header">
+            <div class="header-contents">
+                <div class="header-title">
+                    <h1 class="header-title-name">My Travel</h1>
+                    <span class="header-title-desc">Go To The World</span>
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        <!-- start nav -->
+        <nav class="main-navbar">
+            <ul class="list-links list-styled">
+                <li class="active"><a href="../index.html">home</a></li>
+                <li><a href="#">about Copmany</a></li>
+                <li><a href="#">contact us</a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+        <!-- start contents -->
+        <section class="contents">
+            <!-- start aside contents -->
+            <section class=" aside-contents">
+                <section class="search-form bg-white">
+                    <form action="#">
+                        <div class="location">
+                            <label for="location">Location :</label>
+                            <input type="text" name="location" id="location" placeholder="Your Location Here..">
+                        </div>
+                        <div class="date">
+                            <label for="depart">Departing:</label>
+                            <input type="date" name="depart" id="depart" required>
+                        </div>
+                        <input type="submit" value="Find" id="generate">
+                    </form>
+                </section>
+                <!-- ADS Section -->
+                <section class="ads bg-white">
+                    <h3>Informations</h3>
+                    <p id="remain"></p>
+                    <p id="days"></p>
+                </section>
+                <!-- End add Section -->
+                <!-- end subscribe -->
+            </section>
+            <!-- end aside contents -->
+
+            <!-- start main-contents -->
+            <section class="main-contents">
+                <div class="main-content-items">
+                    <article class="main-content-item bg-white">
+                        <h2 class="result">Reasult</h2>
+                        <figure class="img-result">
+                            <img id="img" src="" alt="">
+
+
+                        </figure>
+                        <p id="loading"></p>
+                        <div class="weather-result">
+                            <strong>wether: </strong>
+                            <h3 id="name"></h3>
+                            <p id="coords"></p>
+                            <h3 id="weather"></h3>
+
+                        </div>
+
+                    </article>
+                </div>
+                <div class="savermove-trip bg-white">
+                    <button type="button" class="btn" id="savebtn">save trip</button>
+                    <button type="button" class="btn" id="removebtn">remove trip</button>
+                </div>
+            </section>
+            <!-- end main contents -->
+
+        </section>
+        <!-- end contents -->
+        <!-- sart footer -->
+        <footer class="web-footer bg-white">
+            <h5 class="footer-rights">
+                all rights served for mdian mohamed
+            </h5>
+            <div class="metadata-links">
+                <ul class="aricle-links-writer list-styled">
+                    <li><a href="#"><i class="icon  fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="icon fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon fab fa-instagram"></i></a></li>
+                    <li><a href="#"> <i class="icon fab fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </section>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+
+
+</body>
+
+</html>
